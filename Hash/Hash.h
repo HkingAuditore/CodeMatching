@@ -54,11 +54,9 @@ typedef struct hashTable
 /*                            所用类型声明                                */
 /************************************************************************/
 
-
 /************************************************************************/
 /*                               方法                                    */
 /************************************************************************/
-
 
 int SaveHashFile(const HashTable* _hash, char* _fileName);
 int ReadHashFile(const HashTable* _hash, char* _fileName);
@@ -66,7 +64,7 @@ int ReadHashFile(const HashTable* _hash, char* _fileName);
 //************************************
 // Method:    用键盘生成哈希表
 // FullName:  GenerateHashTable_KEYBOARD
-// Access:    public 
+// Access:    public
 // Returns:   HashTable*
 // Qualifier:
 // Parameter: int _size

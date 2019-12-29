@@ -6,7 +6,6 @@
 #define MAXSTR 100
 #define END_OF_READ 0
 
-
 int ReadInt()
 {
 	int input;
@@ -16,10 +15,10 @@ int ReadInt()
 
 char* ReadStr()
 {
-	char* input = (char*)malloc(MAXSTR*sizeof(char));
+	char* input = (char*)malloc(MAXSTR * sizeof(char));
 	char temp;
 	int i = 0;
-	while (scanf("%c",&temp) && temp!='\n' && temp!= ' ')
+	while (scanf("%c", &temp) && temp != '\n' && temp != ' ')
 	{
 		input[i++] = temp;
 	}
@@ -28,17 +27,17 @@ char* ReadStr()
 }
 
 int ReadContinue()
-{	
+{
 	int input;
 	scanf_s("%d", &input);
 	if (input != END_OF_READ)
 	{
-		while (getchar()!='\n'){};
+		while (getchar() != '\n') {};
 		return 1;
-	}else
+	}
+	else
 	{
 		while (getchar() != '\n') {};
 		return 0;
 	}
-	
 }

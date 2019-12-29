@@ -203,7 +203,7 @@ HashTable* GenerateHashTable_KEYBOARD(int _size)
 char* ConvertNode2String(const HashTableNode* _node)
 {
 	//	{ position,conflict,_hashKey,_keyWord,_type}
-	char* string = (char*)calloc(MAXCHAR_NODE,sizeof(char));
+	char* string = (char*)calloc(MAXCHAR_NODE, sizeof(char));
 	string[0] = '{';
 	char tempString[10];
 	strcat(string, itoa(_node->Position, tempString, 10));
@@ -222,7 +222,7 @@ char* ConvertNode2String(const HashTableNode* _node)
 char* ConvertHash2String(const HashTable* _hash)
 {
 	//	{ position,conflict,_hashKey,_keyWord,_type}
-	char* string = (char*)calloc(MAXCHAR_HASH,sizeof(char));
+	char* string = (char*)calloc(MAXCHAR_HASH, sizeof(char));
 	string[0] = '[';
 	char tempString[10];
 	strcat(string, itoa(_hash->Size, tempString, 10));
@@ -240,9 +240,8 @@ char* ConvertHash2String(const HashTable* _hash)
 	return string;
 }
 
-
 // 将哈希表存储为.hash文件
-int SaveHashFile(const HashTable* _hash,char* _fileName)
+int SaveHashFile(const HashTable* _hash, char* _fileName)
 {
 	SaveHash(ConvertHash2String(_hash), _fileName);
 }
@@ -250,5 +249,4 @@ int SaveHashFile(const HashTable* _hash,char* _fileName)
 // 读取config文件并将之转换为哈希表
 int ReadHashFile(const HashTable* _hash, char* _fileName)
 {
-	
 }
