@@ -28,7 +28,7 @@ typedef enum keywordType {
 	Decision,				/*选择=5			*/
 	Jump,					/*跳转=6			*/
 	Derived,				/*派生=7			*/
-	function,				/*方法=8			*/
+	Function,				/*方法=8			*/
 	Others					/*其他=9			*/
 }KeywordType;
 

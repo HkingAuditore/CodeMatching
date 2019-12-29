@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Basic"
+    "\\Basic",
+    "\\Hash"
   ],
-  "SelectedNode": "\\main.c",
+  "SelectedNode": "\\Hash\\Hash.c",
   "PreviewInSolutionExplorer": false
 }
