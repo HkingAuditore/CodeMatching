@@ -1,0 +1,58 @@
+﻿  Hash.c
+f:\cprogram\课程设计\codematching\codematching\basic\input.h(13): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+f:\cprogram\课程设计\codematching\codematching\basic\input.h(22): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(47): warning C4047: “函数”:“char *”与“char *[100]”的间接级别不同
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(47): warning C4024: “strcpy”: 形参和实参 1 的类型不同
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(48): warning C4047: “函数”:“char *”与“char *[100]”的间接级别不同
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(48): warning C4024: “strcat”: 形参和实参 1 的类型不同
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(49): warning C4047: “函数”:“char *”与“char *[100]”的间接级别不同
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(49): warning C4024: “strcat”: 形参和实参 1 的类型不同
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(52): warning C4047: “函数”:“const char *”与“char *[100]”的间接级别不同
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(52): warning C4024: “fopen”: 形参和实参 1 的类型不同
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(47): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: 参见“strcpy”的声明
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(48): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(49): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\basic\output.h(52): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(209): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(210): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(211): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(212): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(213): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(214): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(215): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(216): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(217): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(218): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(228): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(229): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(230): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(231): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(236): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(239): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
+  main.c
+  正在生成代码...
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(248): warning C4716: “SaveHashFile”: 必须返回一个值
+f:\cprogram\课程设计\codematching\codematching\hash\hash.c(254): warning C4716: “ReadHashFile”: 必须返回一个值
+  CodeMatching.vcxproj -> F:\CProgram\课程设计\CodeMatching\Debug\CodeMatching.exe
