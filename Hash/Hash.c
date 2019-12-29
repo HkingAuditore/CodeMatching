@@ -241,7 +241,7 @@ char* ConvertHash2String(const HashTable* _hash)
 }
 
 
-// 将哈希表存储为config文件
+// 将哈希表存储为.hash文件
 int SaveHashFile(const HashTable* _hash,char* _fileName)
 {
 	SaveHash(ConvertHash2String(_hash), _fileName);
