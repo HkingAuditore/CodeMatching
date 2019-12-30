@@ -40,7 +40,7 @@ typedef struct hashTableNode
 	KeywordInfo* Info;
 	int HashKey;
 	int Conflict;
-	int Next;
+	int Position;
 } HashTableNode;
 
 // 哈希表
@@ -48,6 +48,7 @@ typedef struct hashTable
 {
 	HashTableNode** Table;
 	int NumOfNodes;
+	int Size;
 } HashTable;
 
 /************************************************************************/
@@ -58,8 +59,8 @@ typedef struct hashTable
 /*                               方法                                    */
 /************************************************************************/
 
-int SaveHashFile(const HashTable* _hash, char* _fileName);
-int ReadHashFile(const HashTable* _hash, char* _fileName);
+int SaveHash(const HashTable* _hash, char* _fileName);
+HashTable* ReadHash(char* _fileName);
 
 //************************************
 // Method:    用键盘生成哈希表

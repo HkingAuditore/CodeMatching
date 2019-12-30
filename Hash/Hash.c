@@ -9,8 +9,6 @@
 #include "../Basic/Output.h"
 #include <string.h>
 
-#define MAXCHAR_NODE 100
-#define MAXCHAR_HASH 1000
 
  /************************************************************************/
  /*                            所用类型声明                                */
@@ -242,13 +240,60 @@ char* ConvertHash2String(const HashTable* _hash)
 
 
 // 将哈希表存储为.hash文件
-int SaveHashFile(const HashTable* _hash,char* _fileName)
+int SaveHash(const HashTable* _hash,char* _fileName)
 {
-	SaveHash(ConvertHash2String(_hash), _fileName);
+	SaveHashFile(ConvertHash2String(_hash), _fileName);
+	
 }
 
-// 读取config文件并将之转换为哈希表
-int ReadHashFile(const HashTable* _hash, char* _fileName)
+// 获取.hash中的节点数据并以之生成节点返回
+HashTableNode* ConvertString2Node(char* _content)
 {
-	
+	//	{ position,conflict,_hashKey,_keyWord,_type}
+	if (_content == NULL){return NULL;}
+	// printf("%s\n", _content);
+	_content[strlen(_content) - 1] = '\0';
+	int position = atoi(strtok_s(_content, ",", &_content));
+	int conflict = atoi(strtok_s(_content, ",", &_content));
+	int hashKey = atoi(strtok_s(_content, ",", &_content));
+	char* keyWord = strtok_s(_content, ",", &_content);
+	int type = atoi(strtok_s(_content, ",", &_content));
+	HashTableNode* node = GenerateNode(keyWord, type);
+	node->Position = position;
+	node->Conflict = conflict;
+	node->HashKey = hashKey;
+	return node;
+}
+
+
+// 读取.hash文件并将之转换为哈希表
+HashTable* ReadHash(char* _fileName)
+{
+	//TODO 将position、conflict、hashKey、keyWord、type各读取至数据，再创建哈希表。
+	char* file = ReadHashFile(_fileName);
+	if(!file)
+	{
+		exit(0);
+	}
+	// printf("%s\n",file);
+	strcpy(file, file+1);
+	file[strlen(file)-1] = '\0';
+	char *tempSaver;
+	char *temp;
+	temp = strtok_s(file, "{", &tempSaver);
+	int size =atoi(strtok_s(temp, ",", &temp));
+	// printf("%d\n", size);
+	int numOfNodes = atoi(strtok_s(temp, ",", &temp));
+	// printf("%d\n", numOfNodes);
+	HashTable* hash = (HashTable*)malloc(1 * sizeof(HashTable));
+	hash->Size = size;
+	hash->NumOfNodes = numOfNodes;
+	hash->Table = (HashTableNode**)calloc(size + 1, sizeof(HashTableNode*));
+	for (int i = 0; i < numOfNodes; i++)
+	{
+		HashTableNode* node = ConvertString2Node(strtok_s(tempSaver, "{", &tempSaver));
+		if (!node)break;
+		hash->Table[node->Position] = node;		
+	}
+	return hash;
 }

@@ -15,17 +15,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="Hash\Hash.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="Matching\Matching.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Hash\Hash.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
     <ClInclude Include="Basic\Input.h">
       <Filter>源文件</Filter>
     </ClInclude>
@@ -34,6 +34,12 @@
     </ClInclude>
     <ClInclude Include="File\File.h">
       <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Hash\Hash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Matching\Matching.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

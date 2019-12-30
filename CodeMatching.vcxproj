@@ -117,12 +117,14 @@
   <ItemGroup>
     <ClCompile Include="Hash\Hash.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="Matching\Matching.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Basic\Input.h" />
     <ClInclude Include="Basic\Output.h" />
     <ClInclude Include="File\File.h" />
     <ClInclude Include="Hash\Hash.h" />
+    <ClInclude Include="Matching\Matching.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
