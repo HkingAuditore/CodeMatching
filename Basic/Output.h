@@ -19,6 +19,12 @@ static void ShowIntro(char* _intro)
 	printf("%s:", _intro);
 }
 
+//输出效果：（换行）
+static void SwitchLine()
+{
+	printf("\n");
+}
+
 // 输出效果：_intro:_attr(换行)
 static void ShowAttribute(char* _intro, int _attr)
 {
@@ -30,6 +36,26 @@ static void ShowAttribute(char* _intro, int _attr)
 static void DrawLine()
 {
 	printf("*******************\n");
+}
+
+//输出二维数组，输出效果：_name：[x,x],[x,x],[x,x],[x,x]...(换行)
+static int Write2DArray(char* _name, int** _array, int _numOfLine)
+{
+	int numOfOutput = 0;
+	printf("%s:", _name);
+	for (int j = 0; j < _numOfLine; j++)
+	{
+		int k = 0;
+		while ((_array[j][k] != 0))
+		{
+			if (numOfOutput)printf(",");
+			printf("[%d,%d]", j, _array[j][k] != -1 ? _array[j][k] : 0);
+			numOfOutput++;
+			k++;
+		}
+	}
+	SwitchLine();
+	return numOfOutput;
 }
 
 /************************************************************************/

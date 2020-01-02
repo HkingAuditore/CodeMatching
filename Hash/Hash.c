@@ -9,7 +9,6 @@
 #include "../Basic/Output.h"
 #include <string.h>
 
-
  /************************************************************************/
  /*                            所用类型声明                                */
  /************************************************************************/
@@ -71,6 +70,14 @@ typedef struct hashTable
 int GetHashKey(ElementType _keyword)
 {
 	return((_keyword[0] - 'a') * 100 + (_keyword[strlen(_keyword) - 1] - 'a')) % 41;
+}
+
+// 再散列（二次探测法）
+int GetReHashKey(int _existedKey, int _conflict, int _sizeOfHash)
+{
+	/*quadratic probing*/
+	int reHash = (_existedKey + (_conflict)*(_conflict)*(_conflict % 2 ? 1 : -1)) % 41;
+	return (reHash ? reHash : _sizeOfHash);
 }
 
 // 根据数字返回对应枚举类型
@@ -150,14 +157,6 @@ int IsConflict(ElementType _word, HashTable* _hash)
 	return 0;
 }
 
-// 再散列（二次探测法）
-int GetReHashKey(int _existedKey, int _conflict, int _sizeOfHash)
-{
-	/*quadratic probing*/
-	int reHash = (_existedKey + (_conflict)*(_conflict)*(_conflict % 2 ? 1 : -1)) % 41;
-	return (reHash ? reHash : _sizeOfHash);
-}
-
 // 获取元素在哈希表的最终位置，并将元素加入哈希表
 int AddNode(ElementType _word, int _type, HashTable* _hash)
 {
@@ -202,7 +201,7 @@ HashTable* GenerateHashTable_KEYBOARD(int _size)
 char* ConvertNode2String(const HashTableNode* _node)
 {
 	//	{ position,conflict,_hashKey,_keyWord,_type}
-	char* string = (char*)calloc(MAXCHAR_NODE,sizeof(char));
+	char* string = (char*)calloc(MAXCHAR_NODE, sizeof(char));
 	string[0] = '{';
 	char tempString[10];
 	strcat(string, itoa(_node->Position, tempString, 10));
@@ -221,7 +220,7 @@ char* ConvertNode2String(const HashTableNode* _node)
 char* ConvertHash2String(const HashTable* _hash)
 {
 	//	{ position,conflict,_hashKey,_keyWord,_type}
-	char* string = (char*)calloc(MAXCHAR_HASH,sizeof(char));
+	char* string = (char*)calloc(MAXCHAR_HASH, sizeof(char));
 	string[0] = '[';
 	char tempString[10];
 	strcat(string, itoa(_hash->Size, tempString, 10));
@@ -239,19 +238,17 @@ char* ConvertHash2String(const HashTable* _hash)
 	return string;
 }
 
-
 // 将哈希表存储为.hash文件
-int SaveHash(const HashTable* _hash,char* _fileName)
+int SaveHash(const HashTable* _hash, char* _fileName)
 {
 	SaveHashFile(ConvertHash2String(_hash), _fileName);
-	
 }
 
 // 获取.hash中的节点数据并以之生成节点返回
 HashTableNode* ConvertString2Node(char* _content)
 {
 	//	{ position,conflict,_hashKey,_keyWord,_type}
-	if (_content == NULL){return NULL;}
+	if (_content == NULL) { return NULL; }
 	// printf("%s\n", _content);
 	_content[strlen(_content) - 1] = '\0';
 	int position = atoi(strtok_s(_content, ",", &_content));
@@ -266,23 +263,22 @@ HashTableNode* ConvertString2Node(char* _content)
 	return node;
 }
 
-
 // 读取.hash文件并将之转换为哈希表
 HashTable* ReadHash(char* _fileName)
 {
 	//TODO 将position、conflict、hashKey、keyWord、type各读取至数据，再创建哈希表。
 	char* file = ReadHashFile(_fileName);
-	if(!file)
+	if (!file)
 	{
 		exit(0);
 	}
 	// printf("%s\n",file);
-	strcpy(file, file+1);
-	file[strlen(file)-1] = '\0';
+	strcpy(file, file + 1);
+	file[strlen(file) - 1] = '\0';
 	char *tempSaver;
 	char *temp;
 	temp = strtok_s(file, "{", &tempSaver);
-	int size =atoi(strtok_s(temp, ",", &temp));
+	int size = atoi(strtok_s(temp, ",", &temp));
 	// printf("%d\n", size);
 	int numOfNodes = atoi(strtok_s(temp, ",", &temp));
 	// printf("%d\n", numOfNodes);
@@ -294,7 +290,40 @@ HashTable* ReadHash(char* _fileName)
 	{
 		HashTableNode* node = ConvertString2Node(strtok_s(tempSaver, "{", &tempSaver));
 		if (!node)break;
-		hash->Table[node->Position] = node;		
+		hash->Table[node->Position] = node;
 	}
 	return hash;
+}
+
+//哈希查找
+HashTableNode* HashSearch(char* _target, HashTable* _hash)
+{
+	int key = GetHashKey(_target);
+	int confilc = 0;
+	// printf("%s:\n", _target);
+	if (key < 1)
+	{
+		// printf("404 NOT FOUND\n");
+		return NULL;
+	}
+	while (_hash->Table[key] != NULL && _hash->Table[key]->Info != NULL && strcmpi(_hash->Table[key]->Info->Keyword, _target) != 0)
+	{
+		// printf("  at key:%d,compare with %s\n", key, _hash->Table[key]->Info->Keyword);
+		key = GetReHashKey(key, ++confilc, _hash->Size);
+		if (key < 1)
+		{
+			// printf("404 NOT FOUND\n");
+			return NULL;
+		}
+		// printf("  refresh to key:%d\n", key);
+	}
+	if (_hash->Table[key])
+	{
+		return _hash->Table[key];
+	}
+	else
+	{
+		// printf("404 NOT FOUND\n");
+		return NULL;
+	}
 }

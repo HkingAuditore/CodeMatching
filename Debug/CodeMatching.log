@@ -1,28 +1,28 @@
 ﻿  Matching.c
-f:\cprogram\mywork\codematching\codematching\file\file.h(21): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+f:\cprogram\mywork\codematching\codematching\file\file.h(20): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: 参见“strcpy”的声明
+f:\cprogram\mywork\codematching\codematching\file\file.h(21): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
 f:\cprogram\mywork\codematching\codematching\file\file.h(22): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
-f:\cprogram\mywork\codematching\codematching\file\file.h(23): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
-f:\cprogram\mywork\codematching\codematching\file\file.h(29): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+f:\cprogram\mywork\codematching\codematching\file\file.h(28): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: 参见“strcpy”的声明
+f:\cprogram\mywork\codematching\codematching\file\file.h(29): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
 f:\cprogram\mywork\codematching\codematching\file\file.h(30): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
-f:\cprogram\mywork\codematching\codematching\file\file.h(31): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
-f:\cprogram\mywork\codematching\codematching\basic\output.h(44): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+f:\cprogram\mywork\codematching\codematching\basic\output.h(71): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
 f:\cprogram\mywork\codematching\codematching\basic\input.h(18): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
 f:\cprogram\mywork\codematching\codematching\basic\input.h(27): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 参见“scanf”的声明
-f:\cprogram\mywork\codematching\codematching\basic\input.h(59): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+f:\cprogram\mywork\codematching\codematching\basic\input.h(58): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
-f:\cprogram\mywork\codematching\codematching\basic\input.h(70): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+f:\cprogram\mywork\codematching\codematching\basic\input.h(69): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
-f:\cprogram\mywork\codematching\codematching\basic\input.h(79): warning C4101: “tempRead”: 未引用的局部变量
-f:\cprogram\mywork\codematching\codematching\matching\matching.c(28): warning C4018: “<”: 有符号/无符号不匹配
-f:\cprogram\mywork\codematching\codematching\matching\matching.c(42): warning C4018: “<”: 有符号/无符号不匹配
-f:\cprogram\mywork\codematching\codematching\matching\matching.c(79): warning C4018: “<”: 有符号/无符号不匹配
+f:\cprogram\mywork\codematching\codematching\basic\input.h(78): warning C4101: “tempRead”: 未引用的局部变量
+f:\cprogram\mywork\codematching\codematching\matching\matching.c(29): warning C4018: “<”: 有符号/无符号不匹配
+f:\cprogram\mywork\codematching\codematching\matching\matching.c(48): warning C4018: “<”: 有符号/无符号不匹配
+f:\cprogram\mywork\codematching\codematching\matching\matching.c(85): warning C4018: “<”: 有符号/无符号不匹配
   CodeMatching.vcxproj -> F:\CProgram\MyWork\CodeMatching\Debug\CodeMatching.exe

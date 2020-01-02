@@ -9,15 +9,15 @@ int main()
 
 	// SaveHash(hash, "myHash");
 	HashTable* hash = ReadHash("myHash");
-	printf("num:%d\n", hash->NumOfNodes);
+	// printf("num:%d\n", hash->NumOfNodes);
 
-	WriteHashTable(hash);
+	// WriteHashTable(hash);
 	Code* code = ReadCodeFile("test");
 	// for (int i = 0; i < code->NumOfLine; i++)
 	// {
 	// 	printf("%s", code->Content[i]);
 	// }
-	SearchingResults* result = KMPTraversal(ReadCodeFile("test"),hash );
+	SearchingResults* result = HashTraversal(code, hash);
 	WriteMatchResults(result);
 	getchar();
 }

@@ -20,4 +20,5 @@ typedef struct searchingResults
 }SearchingResults;
 
 SearchingResults* KMPTraversal(Code* _target, HashTable* _keywordTable);
+SearchingResults* HashTraversal(Code* _target, HashTable* _keywordTable);
 int WriteMatchResults(SearchingResults* _result);

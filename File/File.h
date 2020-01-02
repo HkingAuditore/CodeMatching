@@ -14,10 +14,9 @@ typedef struct code
 	int NumOfLine;
 }Code;
 
-
 static char* GetHashFilePath(char* _fileName)
 {
-	char* filePath= (char*)calloc(PATH_LENGTH,sizeof(char));
+	char* filePath = (char*)calloc(PATH_LENGTH, sizeof(char));
 	strcpy(filePath, HASH_SAVE_POSITION);
 	strcat(filePath, _fileName);
 	strcat(filePath, HASH_FILE_EXTENSION);

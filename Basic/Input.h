@@ -48,7 +48,6 @@ static int ReadContinue()
 	}
 }
 
-
 /************************************************************************/
 /*                                ÎÄ¼þÊäÈë                                */
 /************************************************************************/
@@ -75,7 +74,7 @@ static Code* ReadCodeFile(char* _fileName)
 	{
 		content[i] = (char*)calloc(MAX_CODE_CHAR, sizeof(char));
 	}
-	char curPos=0;
+	char curPos = 0;
 	char tempRead;
 
 	// while ((tempRead = fgetc(code))!=EOF)
@@ -90,9 +89,9 @@ static Code* ReadCodeFile(char* _fileName)
 
 	code->Content = content;
 	code->NumOfLine = curPos;
-	
+
 	// printf("******************************************\n");
-	
+
 	free(filePath);
 	return code;
 }

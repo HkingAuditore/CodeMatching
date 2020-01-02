@@ -5,11 +5,13 @@
 #include "../Basic/Output.h"
 #include "../Basic/Input.h"
 
-#define  MAX_MATCHING 100;
+#define  MAX_MATCHING 100
+#define  MAX_WORD_CHAR 60
 
 typedef struct searchingResult
 {
 	char* KeyWord;
+	//MatchPositions[i][j]--->i表示第几行，j表示该行的第几个匹配，存储匹配到的位置
 	int** MatchPositions;
 	int NumOfMatch;
 }SearchingResult;
@@ -23,7 +25,7 @@ typedef struct searchingResults
 
 int IsMark(char _char)
 {
-	char marks[] = " !@#$%^&*()-=_+{}[]|;:',<>./?.\n";
+	char marks[] = " !@#$%^&*()-=_+{}[]|;:,<>./?.\t\v\r\"\'\?\n";
 	for (int i = 0; i < strlen(marks); i++)
 	{
 		if (_char == marks[i])
@@ -33,7 +35,6 @@ int IsMark(char _char)
 	}
 	return 0;
 }
-
 
 /************************************************************************/
 /*                             KMP检测法                                 */
@@ -132,33 +133,95 @@ SearchingResults* KMPTraversal(Code* _target, HashTable* _keywordTable)
 	return results;
 }
 
-
 /************************************************************************/
 /*                          哈希查找检测法                                 */
 /************************************************************************/
 
+int HashCompare(char* _target, HashTable* _hash)
+{
+	HashTableNode* result = NULL;
+	if (result = HashSearch(_target, _hash))
+	{
+		SearchingResult* searchingResult = (SearchingResult*)malloc(sizeof(SearchingResult));
+		searchingResult->KeyWord = _target;
+		return result->Position;
+	}
+	// printf("return -1!");
+	return -1;
+}
 
+SearchingResults* HashTraversal(Code* _target, HashTable* _keywordTable)
+{
+	SearchingResults* results = (SearchingResults*)malloc(sizeof(SearchingResults));
+	results->NumOfLine = _target->NumOfLine;
+	results->NumOfResults = _keywordTable->Size;
+	SearchingResult** allResult = (SearchingResult**)calloc(_keywordTable->Size + 1, sizeof(SearchingResult*));
+	for (int i = 1; i < _keywordTable->Size + 1; i++)
+	{
+		if (!_keywordTable->Table[i])continue;
+		allResult[i] = (SearchingResult*)calloc(1, sizeof(SearchingResult));
+		allResult[i]->KeyWord = _keywordTable->Table[i]->Info->Keyword;
+		allResult[i]->MatchPositions = (int**)calloc(MAX_CODE_LINE, sizeof(int*));
+		for (int j = 0; j < MAX_CODE_LINE; j++)
+		{
+			allResult[i]->MatchPositions[j] = (int*)calloc(MAX_CODE_CHAR, sizeof(int));
+		}
+	}
+	char tempWord[MAX_WORD_CHAR];
+	int tempWordPos = 0;
+	for (int i = 0; i < _target->NumOfLine; i++)
+	{
+		int curPos = 0;
+		while (_target->Content[i][curPos] != '\0')
+		{
+			if (!IsMark(_target->Content[i][curPos]))
+			{
+				tempWord[tempWordPos++] = _target->Content[i][curPos];
+			}
+			else
+			{
+				tempWord[tempWordPos] = '\0';
+				if (tempWordPos <= 1)
+				{
+					tempWordPos = 0;
+					curPos++;
+					continue;
+				}
+				int wordCompare = HashCompare(tempWord, _keywordTable);
+				if (wordCompare != -1)
+				{
+					// printf("No.%d match found at[%d,%d]\n",lineMatch, i, curPos - tempWordPos + 1);
+					allResult[wordCompare]->NumOfMatch++;
+					int lineMatch = 0;
+					while (allResult[wordCompare]->MatchPositions[i][lineMatch] != 0)
+					{
+						lineMatch++;
+					}
+					allResult[wordCompare]->MatchPositions[i][lineMatch++] = (curPos - tempWordPos) != 0 ? (curPos - tempWordPos) : -1;
+				}
+				tempWordPos = 0;
+			}
+			curPos++;
+		}
+	}
+	results->Results = allResult;
+	return results;
+}
 
+/************************************************************************/
+/*                                  结果输出                             */
+/************************************************************************/
 int WriteMatchResults(SearchingResults* _result)
 {
 	for (int i = 1; i <= _result->NumOfResults; i++)
 	{
 		if (!(_result->Results[i]))continue;
-		printf("%s:%d    ", _result->Results[i]->KeyWord, _result->Results[i]->NumOfMatch);
+		DrawLine();
+		ShowAttribute(_result->Results[i]->KeyWord, _result->Results[i]->NumOfMatch);
 		if (_result->Results[i]->NumOfMatch != 0)
 		{
-			printf("Positions:");
-			for (int j = 0; j < _result->NumOfLine; j++)
-			{
-				int k = 0;
-				while ((_result->Results[i]->MatchPositions[j][k] != 0))
-				{
-					printf("at[%d,%d] ", j, _result->Results[i]->MatchPositions[j][k] != -1 ? _result->Results[i]->MatchPositions[j][k] : 0);
-					k++;
-				}
-			}
+			Write2DArray("Positions", _result->Results[i]->MatchPositions, _result->NumOfLine);
 		}
-		printf("\n");
 	}
 	return 0;
 }

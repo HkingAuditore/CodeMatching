@@ -61,6 +61,7 @@ typedef struct hashTable
 /************************************************************************/
 
 int SaveHash(const HashTable* _hash, char* _fileName);
+
 HashTable* ReadHash(char* _fileName);
 
 //************************************
@@ -74,3 +75,5 @@ HashTable* ReadHash(char* _fileName);
 HashTable* GenerateHashTable_KEYBOARD(int _size);
 
 void WriteHashTable(HashTable* _hash);
+
+HashTableNode* HashSearch(char* _target, HashTable* _hash);
