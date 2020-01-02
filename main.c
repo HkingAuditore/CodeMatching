@@ -1,13 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Hash/Hash.h"
+#include "Matching/Matching.h"
+#include "Basic/Input.h"
 
 int main()
 {
 	// HashTable* hash = GenerateHashTable_KEYBOARD(43);
-	// WriteHashTable    (hash);
+
 	// SaveHash(hash, "myHash");
 	HashTable* hash = ReadHash("myHash");
+	printf("num:%d\n", hash->NumOfNodes);
+
 	WriteHashTable(hash);
+	Code* code = ReadCodeFile("test");
+	// for (int i = 0; i < code->NumOfLine; i++)
+	// {
+	// 	printf("%s", code->Content[i]);
+	// }
+	SearchingResults* result = KMPTraversal(ReadCodeFile("test"),hash );
+	WriteMatchResults(result);
 	getchar();
 }

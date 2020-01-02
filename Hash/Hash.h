@@ -31,6 +31,7 @@ typedef struct keywordInfo
 {
 	char* Keyword;
 	int HashKey;
+	int* MatchingInfo;
 	KeywordType Type;
 } KeywordInfo;
 

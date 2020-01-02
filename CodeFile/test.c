@@ -5,39 +5,39 @@
 #include <string.h>
 
 /************************************************************************/
-/*                               命令行输出                               */
+/*                                                              */
 /************************************************************************/
-// 输出效果：_tip(换行)
+// 
 static void ShowLine(char* _tip)
 {
 	printf("%s\n", _tip);
 }
 
-// 输出效果：_intro:
+// 
 static void ShowIntro(char* _intro)
 {
 	printf("%s:", _intro);
 }
 
-// 输出效果：_intro:_attr(换行)
+// 
 static void ShowAttribute(char* _intro, int _attr)
 {
 	ShowIntro(_intro);
 	printf("%d\n", _attr);
 }
 
-// 输出效果：*******************(换行)
+// 
 static void DrawLine()
 {
 	printf("*******************\n");
 }
 
 /************************************************************************/
-/*                                文件输出                                */
+/*                                                                */
 /************************************************************************/
 #include "../File/File.h"
 
-//输出Hash文件保存
+//
 static int SaveHashFile(char* _content, char* _fileName)
 {
 	char* filePath = GetHashFilePath(_fileName);
