@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-F:/CProgram/MyWork/CodeMatching/CodeMatching/Basic/Input.h
-stdio.h
--
-stdlib.h
--
-../File/File.h
-F:/CProgram/MyWork/CodeMatching/CodeMatching/File/File.h
-
 F:/CProgram/MyWork/CodeMatching/CodeMatching/Basic/Output.h
 stdio.h
 -
@@ -28,39 +20,11 @@ F:/CProgram/MyWork/CodeMatching/CodeMatching/File/File.h
 string.h
 -
 
-F:/CProgram/MyWork/CodeMatching/CodeMatching/Hash/Hash.c
-stdio.h
--
-stdlib.h
--
-string.h
--
-../Basic/Input.h
-F:/CProgram/MyWork/CodeMatching/CodeMatching/Basic/Input.h
-../Basic/Output.h
-F:/CProgram/MyWork/CodeMatching/CodeMatching/Basic/Output.h
-string.h
--
-
 F:/CProgram/MyWork/CodeMatching/CodeMatching/Hash/Hash.h
 stdio.h
 -
 stdlib.h
 -
-
-F:/CProgram/MyWork/CodeMatching/CodeMatching/Matching/Matching.c
-stdio.h
--
-stdlib.h
--
-string.h
--
-../Hash/Hash.h
-F:/CProgram/MyWork/CodeMatching/CodeMatching/Hash/Hash.h
-../Basic/Output.h
-F:/CProgram/MyWork/CodeMatching/CodeMatching/Basic/Output.h
-../Basic/Input.h
-F:/CProgram/MyWork/CodeMatching/CodeMatching/Basic/Input.h
 
 F:/CProgram/MyWork/CodeMatching/CodeMatching/Matching/Matching.h
 stdio.h
@@ -74,13 +38,27 @@ F:/CProgram/MyWork/CodeMatching/CodeMatching/Hash/Hash.h
 ../File/File.h
 F:/CProgram/MyWork/CodeMatching/CodeMatching/File/File.h
 
-F:/CProgram/MyWork/CodeMatching/CodeMatching/main.c
+F:/CProgram/MyWork/CodeMatching/CodeMatching/SimilarityJudgment/SimilarityJudgment.c
 stdio.h
 -
 stdlib.h
 -
-Matching/Matching.h
+../Vector/Vector.h
+F:/CProgram/MyWork/CodeMatching/CodeMatching/Vector/Vector.h
+../Matching/Matching.h
 F:/CProgram/MyWork/CodeMatching/CodeMatching/Matching/Matching.h
-Basic/Input.h
-F:/CProgram/MyWork/CodeMatching/CodeMatching/Basic/Input.h
+
+F:/CProgram/MyWork/CodeMatching/CodeMatching/Vector/Vector.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+stdarg.h
+-
+../Basic/Output.h
+F:/CProgram/MyWork/CodeMatching/CodeMatching/Basic/Output.h
+
+F:/CProgram/MyWork/CodeMatching/CodeMatching/Vector/Vector.h
 

@@ -200,7 +200,7 @@ char *ConvertNode2String(const HashTableNode *_node) {
 
 // 将一个哈希表信息转换为字符串
 char *ConvertHash2String(const HashTable *_hash) {
-    //	{ position,conflict,_hashKey,_keyWord,_type}
+    //	[ size,numOfNodes,{node1Info},{node2Info},...]
     char *string = (char *) calloc(MAXCHAR_HASH, sizeof(char));
     string[0] = '[';
     char tempString[10];
@@ -242,6 +242,7 @@ HashTableNode *ConvertString2Node(char *_content) {
 
 // 读取.hash文件并将之转换为哈希表
 HashTable *ReadHash(char *_fileName) {
+    //	[ size,numOfNodes,{node1Info},{node2Info},...]
     //TODO 将position、conflict、hashKey、keyWord、type各读取至数据，再创建哈希表。
     char *file = ReadHashFile(_fileName);
     if (!file) {

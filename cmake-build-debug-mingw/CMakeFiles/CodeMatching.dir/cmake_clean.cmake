@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CodeMatching.dir/Hash/Hash.c.obj"
   "CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj"
+  "CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.obj"
+  "CMakeFiles/CodeMatching.dir/Vector/Vector.c.obj"
   "CMakeFiles/CodeMatching.dir/main.c.obj"
   "CodeMatching.exe"
   "CodeMatching.exe.manifest"

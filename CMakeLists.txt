@@ -3,4 +3,4 @@ project(untitled1 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(CodeMatching main.c Hash/Hash.c Matching/Matching.c)
+add_executable(CodeMatching main.c Hash/Hash.c Matching/Matching.c Vector/Vector.c SimilarityJudgment/SimilarityJudgment.c)

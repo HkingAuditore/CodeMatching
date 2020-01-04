@@ -95,11 +95,39 @@ CMakeFiles/CodeMatching.dir/Matching/Matching.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CodeMatching.dir/Matching/Matching.c.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\CProgram\MyWork\CodeMatching\CodeMatching\Matching\Matching.c -o CMakeFiles\CodeMatching.dir\Matching\Matching.c.s
 
+CMakeFiles/CodeMatching.dir/Vector/Vector.c.obj: CMakeFiles/CodeMatching.dir/flags.make
+CMakeFiles/CodeMatching.dir/Vector/Vector.c.obj: ../Vector/Vector.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\MyWork\CodeMatching\CodeMatching\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/CodeMatching.dir/Vector/Vector.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CodeMatching.dir\Vector\Vector.c.obj   -c F:\CProgram\MyWork\CodeMatching\CodeMatching\Vector\Vector.c
+
+CMakeFiles/CodeMatching.dir/Vector/Vector.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CodeMatching.dir/Vector/Vector.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\CProgram\MyWork\CodeMatching\CodeMatching\Vector\Vector.c > CMakeFiles\CodeMatching.dir\Vector\Vector.c.i
+
+CMakeFiles/CodeMatching.dir/Vector/Vector.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CodeMatching.dir/Vector/Vector.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\CProgram\MyWork\CodeMatching\CodeMatching\Vector\Vector.c -o CMakeFiles\CodeMatching.dir\Vector\Vector.c.s
+
+CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.obj: CMakeFiles/CodeMatching.dir/flags.make
+CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.obj: ../SimilarityJudgment/SimilarityJudgment.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\MyWork\CodeMatching\CodeMatching\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CodeMatching.dir\SimilarityJudgment\SimilarityJudgment.c.obj   -c F:\CProgram\MyWork\CodeMatching\CodeMatching\SimilarityJudgment\SimilarityJudgment.c
+
+CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\CProgram\MyWork\CodeMatching\CodeMatching\SimilarityJudgment\SimilarityJudgment.c > CMakeFiles\CodeMatching.dir\SimilarityJudgment\SimilarityJudgment.c.i
+
+CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\CProgram\MyWork\CodeMatching\CodeMatching\SimilarityJudgment\SimilarityJudgment.c -o CMakeFiles\CodeMatching.dir\SimilarityJudgment\SimilarityJudgment.c.s
+
 # Object files for target CodeMatching
 CodeMatching_OBJECTS = \
 "CMakeFiles/CodeMatching.dir/main.c.obj" \
 "CMakeFiles/CodeMatching.dir/Hash/Hash.c.obj" \
-"CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj"
+"CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj" \
+"CMakeFiles/CodeMatching.dir/Vector/Vector.c.obj" \
+"CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.obj"
 
 # External object files for target CodeMatching
 CodeMatching_EXTERNAL_OBJECTS =
@@ -107,11 +135,13 @@ CodeMatching_EXTERNAL_OBJECTS =
 CodeMatching.exe: CMakeFiles/CodeMatching.dir/main.c.obj
 CodeMatching.exe: CMakeFiles/CodeMatching.dir/Hash/Hash.c.obj
 CodeMatching.exe: CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj
+CodeMatching.exe: CMakeFiles/CodeMatching.dir/Vector/Vector.c.obj
+CodeMatching.exe: CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.obj
 CodeMatching.exe: CMakeFiles/CodeMatching.dir/build.make
 CodeMatching.exe: CMakeFiles/CodeMatching.dir/linklibs.rsp
 CodeMatching.exe: CMakeFiles/CodeMatching.dir/objects1.rsp
 CodeMatching.exe: CMakeFiles/CodeMatching.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\CProgram\MyWork\CodeMatching\CodeMatching\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable CodeMatching.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\CProgram\MyWork\CodeMatching\CodeMatching\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable CodeMatching.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CodeMatching.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

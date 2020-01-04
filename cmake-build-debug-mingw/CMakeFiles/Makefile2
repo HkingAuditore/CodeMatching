@@ -73,12 +73,12 @@ preinstall:
 CMakeFiles/CodeMatching.dir/all:
 	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/depend
 	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\CProgram\MyWork\CodeMatching\CodeMatching\cmake-build-debug-mingw\CMakeFiles --progress-num=1,2,3,4 "Built target CodeMatching"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\CProgram\MyWork\CodeMatching\CodeMatching\cmake-build-debug-mingw\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target CodeMatching"
 .PHONY : CMakeFiles/CodeMatching.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CodeMatching.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\CProgram\MyWork\CodeMatching\CodeMatching\cmake-build-debug-mingw\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\CProgram\MyWork\CodeMatching\CodeMatching\cmake-build-debug-mingw\CMakeFiles 6
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/CodeMatching.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\CProgram\MyWork\CodeMatching\CodeMatching\cmake-build-debug-mingw\CMakeFiles 0
 .PHONY : CMakeFiles/CodeMatching.dir/rule

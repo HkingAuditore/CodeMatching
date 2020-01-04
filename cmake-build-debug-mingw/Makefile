@@ -176,6 +176,60 @@ Matching/Matching.c.s:
 	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/Matching/Matching.c.s
 .PHONY : Matching/Matching.c.s
 
+SimilarityJudgment/SimilarityJudgment.obj: SimilarityJudgment/SimilarityJudgment.c.obj
+
+.PHONY : SimilarityJudgment/SimilarityJudgment.obj
+
+# target to build an object file
+SimilarityJudgment/SimilarityJudgment.c.obj:
+	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.obj
+.PHONY : SimilarityJudgment/SimilarityJudgment.c.obj
+
+SimilarityJudgment/SimilarityJudgment.i: SimilarityJudgment/SimilarityJudgment.c.i
+
+.PHONY : SimilarityJudgment/SimilarityJudgment.i
+
+# target to preprocess a source file
+SimilarityJudgment/SimilarityJudgment.c.i:
+	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.i
+.PHONY : SimilarityJudgment/SimilarityJudgment.c.i
+
+SimilarityJudgment/SimilarityJudgment.s: SimilarityJudgment/SimilarityJudgment.c.s
+
+.PHONY : SimilarityJudgment/SimilarityJudgment.s
+
+# target to generate assembly for a file
+SimilarityJudgment/SimilarityJudgment.c.s:
+	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/SimilarityJudgment/SimilarityJudgment.c.s
+.PHONY : SimilarityJudgment/SimilarityJudgment.c.s
+
+Vector/Vector.obj: Vector/Vector.c.obj
+
+.PHONY : Vector/Vector.obj
+
+# target to build an object file
+Vector/Vector.c.obj:
+	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/Vector/Vector.c.obj
+.PHONY : Vector/Vector.c.obj
+
+Vector/Vector.i: Vector/Vector.c.i
+
+.PHONY : Vector/Vector.i
+
+# target to preprocess a source file
+Vector/Vector.c.i:
+	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/Vector/Vector.c.i
+.PHONY : Vector/Vector.c.i
+
+Vector/Vector.s: Vector/Vector.c.s
+
+.PHONY : Vector/Vector.s
+
+# target to generate assembly for a file
+Vector/Vector.c.s:
+	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/Vector/Vector.c.s
+.PHONY : Vector/Vector.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -218,6 +272,12 @@ help:
 	@echo ... Matching/Matching.obj
 	@echo ... Matching/Matching.i
 	@echo ... Matching/Matching.s
+	@echo ... SimilarityJudgment/SimilarityJudgment.obj
+	@echo ... SimilarityJudgment/SimilarityJudgment.i
+	@echo ... SimilarityJudgment/SimilarityJudgment.s
+	@echo ... Vector/Vector.obj
+	@echo ... Vector/Vector.i
+	@echo ... Vector/Vector.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
