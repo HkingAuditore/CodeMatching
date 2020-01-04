@@ -149,6 +149,33 @@ Hash/Hash.c.s:
 	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/Hash/Hash.c.s
 .PHONY : Hash/Hash.c.s
 
+Matching/Matching.obj: Matching/Matching.c.obj
+
+.PHONY : Matching/Matching.obj
+
+# target to build an object file
+Matching/Matching.c.obj:
+	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj
+.PHONY : Matching/Matching.c.obj
+
+Matching/Matching.i: Matching/Matching.c.i
+
+.PHONY : Matching/Matching.i
+
+# target to preprocess a source file
+Matching/Matching.c.i:
+	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/Matching/Matching.c.i
+.PHONY : Matching/Matching.c.i
+
+Matching/Matching.s: Matching/Matching.c.s
+
+.PHONY : Matching/Matching.s
+
+# target to generate assembly for a file
+Matching/Matching.c.s:
+	$(MAKE) -f CMakeFiles\CodeMatching.dir\build.make CMakeFiles/CodeMatching.dir/Matching/Matching.c.s
+.PHONY : Matching/Matching.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -188,6 +215,9 @@ help:
 	@echo ... Hash/Hash.obj
 	@echo ... Hash/Hash.i
 	@echo ... Hash/Hash.s
+	@echo ... Matching/Matching.obj
+	@echo ... Matching/Matching.i
+	@echo ... Matching/Matching.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -24,11 +24,14 @@
     <ClCompile Include="Matching\Matching.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Vector\Vector.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SimilarityJudgment\SimilarityJudgment.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Basic\Input.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
     <ClInclude Include="Basic\Output.h">
       <Filter>源文件</Filter>
     </ClInclude>
@@ -40,6 +43,15 @@
     </ClInclude>
     <ClInclude Include="Matching\Matching.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector\Vector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SimilarityJudgment\SimilarityJudgment.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Basic\Input.h">
+      <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -118,6 +118,8 @@
     <ClCompile Include="Hash\Hash.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Matching\Matching.c" />
+    <ClCompile Include="SimilarityJudgment\SimilarityJudgment.c" />
+    <ClCompile Include="Vector\Vector.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Basic\Input.h" />
@@ -125,6 +127,8 @@
     <ClInclude Include="File\File.h" />
     <ClInclude Include="Hash\Hash.h" />
     <ClInclude Include="Matching\Matching.h" />
+    <ClInclude Include="SimilarityJudgment\SimilarityJudgment.h" />
+    <ClInclude Include="Vector\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "F:/CProgram/MyWork/CodeMatching/CodeMatching/Hash/Hash.c" "F:/CProgram/MyWork/CodeMatching/CodeMatching/cmake-build-debug-mingw/CMakeFiles/CodeMatching.dir/Hash/Hash.c.obj"
+  "F:/CProgram/MyWork/CodeMatching/CodeMatching/Matching/Matching.c" "F:/CProgram/MyWork/CodeMatching/CodeMatching/cmake-build-debug-mingw/CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj"
   "F:/CProgram/MyWork/CodeMatching/CodeMatching/main.c" "F:/CProgram/MyWork/CodeMatching/CodeMatching/cmake-build-debug-mingw/CMakeFiles/CodeMatching.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

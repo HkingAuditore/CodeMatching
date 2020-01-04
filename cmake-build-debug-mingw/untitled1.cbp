@@ -80,6 +80,12 @@
 		<Unit filename="F:/CProgram/MyWork/CodeMatching/CodeMatching/Hash/Hash.h">
 			<Option target="CodeMatching"/>
 		</Unit>
+		<Unit filename="F:/CProgram/MyWork/CodeMatching/CodeMatching/Matching/Matching.c">
+			<Option target="CodeMatching"/>
+		</Unit>
+		<Unit filename="F:/CProgram/MyWork/CodeMatching/CodeMatching/Matching/Matching.h">
+			<Option target="CodeMatching"/>
+		</Unit>
 		<Unit filename="F:/CProgram/MyWork/CodeMatching/CodeMatching/main.c">
 			<Option target="CodeMatching"/>
 		</Unit>

@@ -25,11 +25,18 @@ static void SwitchLine()
 	printf("\n");
 }
 
-// 输出效果：_intro:_attr(换行)
-static void ShowAttribute(char* _intro, int _attr)
+// INT 输出效果：_intro:_attr(换行)
+static void ShowAttribute_Int(char* _intro, int _attr)
 {
 	ShowIntro(_intro);
 	printf("%d\n", _attr);
+}
+
+// DOUBLE 输出效果：_intro:_attr(换行)
+static void ShowAttribute_Double(char* _intro, double _attr)
+{
+	ShowIntro(_intro);
+	printf("%f\n", _attr);
 }
 
 // 输出效果：*******************(换行)
@@ -56,6 +63,19 @@ static int Write2DArray(char* _name, int** _array, int _numOfLine)
 	}
 	SwitchLine();
 	return numOfOutput;
+}
+
+//输出一位数组，输出效果：_name:[x,x,x....](换行)
+static void ShowArray(char* _name,int _dimension,const int* _array)
+{
+	printf("%s:[",_name);
+	for (int i = 0; i < _dimension; i++)
+	{
+		printf("%d", _array[i]);
+		if (i < _dimension - 1)printf(",");
+	}
+	printf("]\n");
+	
 }
 
 /************************************************************************/

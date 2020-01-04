@@ -6,6 +6,15 @@ CMakeFiles/CodeMatching.dir/Hash/Hash.c.obj: ../Basic/Output.h
 CMakeFiles/CodeMatching.dir/Hash/Hash.c.obj: ../File/File.h
 CMakeFiles/CodeMatching.dir/Hash/Hash.c.obj: ../Hash/Hash.c
 
+CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj: ../Basic/Input.h
+CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj: ../Basic/Output.h
+CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj: ../File/File.h
+CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj: ../Hash/Hash.h
+CMakeFiles/CodeMatching.dir/Matching/Matching.c.obj: ../Matching/Matching.c
+
+CMakeFiles/CodeMatching.dir/main.c.obj: ../Basic/Input.h
+CMakeFiles/CodeMatching.dir/main.c.obj: ../File/File.h
 CMakeFiles/CodeMatching.dir/main.c.obj: ../Hash/Hash.h
+CMakeFiles/CodeMatching.dir/main.c.obj: ../Matching/Matching.h
 CMakeFiles/CodeMatching.dir/main.c.obj: ../main.c
 
