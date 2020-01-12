@@ -13,6 +13,7 @@
 typedef char *ElementType;
 
 // 关键字类型
+#define NUM_OF_KEYWORD_TYPE 10
 typedef enum keywordType {
     DataTypes,                /*数据类型=0		*/
     Qualifiers,                /*类型修饰=1		*/
@@ -30,7 +31,6 @@ typedef enum keywordType {
 typedef struct keywordInfo {
     char *Keyword;
     int HashKey;
-    int *MatchingInfo;
     KeywordType Type;
 } KeywordInfo;
 
@@ -61,16 +61,8 @@ int SaveHash(const HashTable *_hash, char *_fileName);
 
 HashTable *ReadHash(char *_fileName);
 
-//************************************
-// Method:    用键盘生成哈希表
-// FullName:  GenerateHashTable_KEYBOARD
-// Access:    public
-// Returns:   HashTable*
-// Qualifier:
-// Parameter: int _size
-//************************************
-HashTable *GenerateHashTable_KEYBOARD(int _size);
-
 void WriteHashTable(HashTable *_hash);
 
+int AddNode(ElementType _word, int _type, HashTable *_hash);
 HashTableNode *HashSearch(char *_target, HashTable *_hash);
+void FreeHash(HashTable* _hash);

@@ -6,12 +6,11 @@
 #include "../Basic/Input.h"
 
 #define  MAX_MATCHING 100
-#define  MAX_WORD_CHAR 60
+#define  MAX_WORD_CHAR 200
 
 typedef struct searchingResult {
     char *KeyWord;
-    //MatchPositions[i][j]--->i表示第几行，j表示该行的第几个匹配，存储匹配到的位置
-    int **MatchPositions;
+	int **MatchPositions;    //MatchPositions[i][j]--->i表示第几行，j表示该行的第几个匹配，存储匹配到的位置
     int NumOfMatch;
 } SearchingResult;
 
@@ -138,7 +137,7 @@ SearchingResults *HashTraversal(Code *_target, HashTable *_keywordTable) {
         allResult[i]->MatchPositions = (int **) calloc(MAX_CODE_LINE, sizeof(int *));
     	if(!allResult[i]->MatchPositions)
     	{
-			printf("no positions!\n");
+			// printf("no positions!\n");
 			return NULL;
     	}
 
@@ -146,7 +145,7 @@ SearchingResults *HashTraversal(Code *_target, HashTable *_keywordTable) {
             allResult[i]->MatchPositions[j] = (int *) calloc(MAX_CODE_CHAR, sizeof(int));
 			if (!allResult[i]->MatchPositions[j])
 			{
-				printf("no positions for [%d:%d]!\n",i,j);
+				// printf("no positions for [%d:%d]!\n",i,j);
 				return NULL;
 			}
         }
@@ -156,18 +155,20 @@ SearchingResults *HashTraversal(Code *_target, HashTable *_keywordTable) {
     for (int i = 0; i < _target->NumOfLine; i++) {
         int curPos = 0;
         while (_target->Content[i][curPos] != '\0') {
-            if (!IsMark(_target->Content[i][curPos])) {
+            if (!IsMark(_target->Content[i][curPos])) { //如果没有读取到非字母就继续
                 tempWord[tempWordPos++] = _target->Content[i][curPos];
             } else {
+            	//读取中止把单词发回这里
                 tempWord[tempWordPos] = '\0';
                 if (tempWordPos <= 1) {
                     tempWordPos = 0;
                     curPos++;
                     continue;
                 }
-                int wordCompare = HashCompare(tempWord, _keywordTable);
+                int wordCompare = HashCompare(tempWord, _keywordTable); //获取匹配结果
                 if (wordCompare != -1) {
                     // printf("No.%d match found at[%d,%d]\n",lineMatch, i, curPos - tempWordPos + 1);
+                	//记录结果
                     allResult[wordCompare]->NumOfMatch++;
                     int lineMatch = 0;
                     while (allResult[wordCompare]->MatchPositions[i][lineMatch] != 0) {
@@ -188,14 +189,47 @@ SearchingResults *HashTraversal(Code *_target, HashTable *_keywordTable) {
 /************************************************************************/
 /*                                  结果输出                             */
 /************************************************************************/
-int WriteMatchResults(SearchingResults *_result) {
+int WriteMatchResults(char* _name,SearchingResults *_result) {
+	DrawStarLine();
+	ShowIntro(_name);
+	SwitchLine();
+	DrawFlatLine();
     for (int i = 1; i <= _result->NumOfResults; i++) {
-        if (!(_result->Results[i]))continue;
-        DrawLine();
-        ShowAttribute_Int(_result->Results[i]->KeyWord, _result->Results[i]->NumOfMatch);
+        if ((!(_result->Results[i]))||(_result->Results[i]->NumOfMatch==0))continue;
+        DrawFlatLine();
+        ShowAttributeTip_Int(_result->Results[i]->KeyWord,"出现次数", _result->Results[i]->NumOfMatch);
         if (_result->Results[i]->NumOfMatch != 0) {
-            Write2DArray("Positions", _result->Results[i]->MatchPositions, _result->NumOfLine);
+            Write2DArray("出现位置", _result->Results[i]->MatchPositions, _result->NumOfLine);
         }
     }
+	DrawStarLine();
+	SwitchLine();
+	SwitchLine();
+	SwitchLine();
     return 0;
+}
+
+/************************************************************************/
+/*                            善后工作                                 */
+/************************************************************************/
+void FreeResult(SearchingResult* _result)
+{
+	for (int i = 0; i < MAX_CODE_LINE; i++)
+	{
+		if (!_result->MatchPositions[i])continue;
+		free(_result->MatchPositions[i]);
+	}
+	free(_result->MatchPositions);
+	free(_result);
+}
+
+void FreeResults(SearchingResults* _results)
+{
+	for (int i = 0; i < _results->NumOfResults; i++)
+	{
+		if (!_results->Results[i])continue;
+		FreeResult(_results->Results[i]);
+	}
+	free(_results->Results);
+	free(_results);
 }

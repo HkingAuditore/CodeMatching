@@ -6,21 +6,25 @@ typedef struct vector
 	int* Components;
 }Vector;
 
-//Éú³ÉÏòÁ¿
+//ç”Ÿæˆå‘é‡
 Vector GenerateVector(int _dimension, ...);
-//Í¨¹ıÊı×éÉú³ÉÏòÁ¿
+//é€šè¿‡æ•°ç»„ç”Ÿæˆå‘é‡
 Vector GenerateVector_Array(int _dimension, int* _data);
-//µã³Ë
+//ç‚¹ä¹˜
 double DotProduct(Vector _vect0, Vector _vect1);
-//¼ÆËãÏòÁ¿Ä£
+//è®¡ç®—å‘é‡æ¨¡
 double GetVectorNorm(Vector _vector);
-//¼ÆËãÏòÁ¿¹ãÒåÓàÏÒ
+//è®¡ç®—å‘é‡å¹¿ä¹‰ä½™å¼¦
 double GetCOS(Vector _vect0, Vector _vect1);
-//ÏòÁ¿¼õ·¨
+//å‘é‡å‡æ³•
 Vector VectorSubtraction(Vector _vect0, Vector _vect1);
-//ÏòÁ¿¼Ó·¨
+//å‘é‡åŠ æ³•
 Vector VectorAddition(Vector _vect0, Vector _vect1);
-//¼ÆËãÏòÁ¿¼¸ºÎ¾àÀë
+//è®¡ç®—å‘é‡å‡ ä½•è·ç¦»
 double GetGeometricDistance(Vector _vect0, Vector _vect1);
-//Êä³öÏòÁ¿
+//è¾“å‡ºå‘é‡
 void WriteVector(char* _name, Vector _vector);
+//é‡Šæ”¾å‘é‡å†…å­˜
+void FreeVector(Vector* _vector);
+double DoubleAbs(double _x);
+double GetGeoDistanceRadio(Vector _vect0, Vector _vect1);

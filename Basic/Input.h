@@ -5,8 +5,7 @@
 
 #define MAX_STR 100
 #define END_OF_READ 0
-#define MAX_CODE_CHAR 1000
-#define MAX_CODE_LINE 1000
+
 
 /************************************************************************/
 /*                               √¸¡Ó–– ‰»Î                               */
@@ -70,14 +69,9 @@ static Code *ReadCodeFile(char *_fileName) {
 	for (int i = 0; i < MAX_CODE_LINE; i++) {
 		content[i] = (char *)calloc(MAX_CODE_CHAR, sizeof(char));
 	}
-	char curPos = 0;
-	char tempRead;
+	int curPos = 0;
 
-	// while ((tempRead = fgetc(code))!=EOF)
-	// {
-	// 	// printf("%c", tempRead);
-	// 	content[curPos++] = tempRead;
-	// }
+
 	while (!feof(codeFile)) {
 		fgets(content[curPos++], MAX_CODE_CHAR, codeFile);
 	}
@@ -85,7 +79,6 @@ static Code *ReadCodeFile(char *_fileName) {
 	code->Content = content;
 	code->NumOfLine = curPos;
 
-	// printf("******************************************\n");
 
 	free(filePath);
 	return code;

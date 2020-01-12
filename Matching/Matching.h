@@ -18,8 +18,15 @@ typedef struct searchingResults {
     int NumOfResults;
 } SearchingResults;
 
+
+//KMP检测法
 SearchingResults *KMPTraversal(Code *_target, HashTable *_keywordTable);
 
+//哈希查找法
 SearchingResults *HashTraversal(Code *_target, HashTable *_keywordTable);
 
-int WriteMatchResults(SearchingResults *_result);
+//打印匹配结果
+int WriteMatchResults(char* _name, SearchingResults *_result);
+
+//释放结果内存
+void FreeResults(SearchingResults* _results);

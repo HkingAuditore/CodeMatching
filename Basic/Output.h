@@ -8,7 +8,7 @@
 /*                               命令行输出                               */
 /************************************************************************/
 // 输出效果：_tip(换行)
-static void ShowLine(char* _tip)
+static void ShowTip(char* _tip)
 {
 	printf("%s\n", _tip);
 }
@@ -16,7 +16,13 @@ static void ShowLine(char* _tip)
 // 输出效果：_intro:
 static void ShowIntro(char* _intro)
 {
-	printf("%s:", _intro);
+	printf("[%s]:", _intro);
+}
+
+// 输出效果：_intro[tip]:
+static void ShowIntroTip(char* _intro,char* _tip)
+{
+	printf("[%s]%s:", _intro,_tip);
 }
 
 //输出效果：（换行）
@@ -26,9 +32,15 @@ static void SwitchLine()
 }
 
 // INT 输出效果：_intro:_attr(换行)
-static void ShowAttribute_Int(char* _intro, int _attr)
+static void ShowAttribute_Int(char* _intro,int _attr)
 {
 	ShowIntro(_intro);
+	printf("%d\n", _attr);
+}
+// INT 输出效果：_intro:_attr(换行)
+static void ShowAttributeTip_Int(char* _intro, char* _tip,int _attr)
+{
+	ShowIntroTip(_intro,_tip);
 	printf("%d\n", _attr);
 }
 
@@ -39,10 +51,16 @@ static void ShowAttribute_Double(char* _intro, double _attr)
 	printf("%f\n", _attr);
 }
 
-// 输出效果：*******************(换行)
-static void DrawLine()
+// 输出效果：*********************************************************(换行)
+static void DrawStarLine()
 {
-	printf("*******************\n");
+	printf("*********************************************************\n");
+}
+
+// 输出效果：----------------------------------------------------------(换行)
+static void DrawFlatLine()
+{
+	printf("----------------------------------------------------------\n");
 }
 
 //输出二维数组，输出效果：_name：[x,x],[x,x],[x,x],[x,x]...(换行)
@@ -89,9 +107,9 @@ static int SaveHashFile(char* _content, char* _fileName)
 	char* filePath = GetHashFilePath(_fileName);
 	FILE *hash = fopen(filePath, "w");
 	if (!hash)return 0;
-	printf("OPEN!!\n");
+	// printf("OPEN!!\n");
 	fputs(_content, hash);
-	printf("SAVE!!\n");
+	// printf("SAVE!!\n");
 	fclose(hash);
 	free(filePath);
 	return 1;

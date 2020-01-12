@@ -30,6 +30,9 @@
     <ClCompile Include="SimilarityJudgment\SimilarityJudgment.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Controller\Controller.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Basic\Output.h">
@@ -51,6 +54,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Basic\Input.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\Controller.h">
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>

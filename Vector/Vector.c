@@ -124,3 +124,26 @@ void WriteVector(char* _name,Vector _vector)
 	ShowArray(_name,_vector.Dimension, _vector.Components);
 }
 
+//释放Vector内存
+void FreeVector(Vector* _vector)
+{
+	free(_vector->Components);
+	free(_vector);
+}
+//获取绝对值
+double DoubleAbs(double _x)
+{
+	return _x > 0 ? _x : (-_x);
+}
+
+//获取几何距离偏差系数（几何距离与同模长几何距离的比值）
+double GetGeoDistanceRadio(Vector _vect0, Vector _vect1)
+{
+	double vectCos = GetCOS(_vect0, _vect1);
+	double vect0Norm = GetVectorNorm(_vect0);
+	double vect1Norm = GetVectorNorm(_vect1);
+	double geoDistance = GetGeometricDistance(_vect0, _vect1);
+	double normalDistance = (sqrt(2.0 * vect0Norm*vect0Norm*(1.0 - vectCos)));
+	double geoNormalDistance = (sqrt(2.0 * vect1Norm*vect1Norm*(1.0 - vectCos)));
+	return normalDistance / geoNormalDistance;
+}
